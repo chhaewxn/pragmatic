@@ -7,10 +7,10 @@
         <div style="text_align: center; max-width: 500px; margin: 4rem auto;">
 
             <img src="{{ target_user.profile.image.url }}" alt=""
-                 style="height: 12rem; width 12rem; border-radius: 20rem; margin-bottom: 2rem;">
+                 style="text-align: center; height: 12rem; width 12rem; border-radius: 20rem; margin-bottom: 2rem;">
 
             {% if target_user.profile %}
-            <h2 style="font-family: 'NanumSquareNeoOTF-cBd'">
+            <h2 style="text-align: center; font-family: 'NanumSquareNeoOTF-cBd'">
                 {{ target_user.profile.nickname }}
                 <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
                     edit
@@ -19,13 +19,13 @@
 
             {% else %}
             <a href="{% url 'profileapp:create' %}">
-                <h2 style="font-family: 'NanumSquareNeoOTF-cBd'">
+                <h2 style="text-align: center; font-family: 'NanumSquareNeoOTF-cBd'">
                     Create Profile
                 </h2>
             </a>
             {% endif %}
 
-            <h5 style="margin-bottom: 3rem;">
+            <h5 style="text-align: center; margin-bottom: 3rem;">
                 {{ target_user.profile.message }}
             </h5>
 
